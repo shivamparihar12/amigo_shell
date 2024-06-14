@@ -11,7 +11,7 @@ char** tokenize_line(char* buffer) {
         exit(EXIT_FAILURE);
     }
 
-    word = strtok(buffer, DELIMETERS);
+    word = strtok(buffer, AMIGO_DELIMETERS);
 
     while (word != NULL)
     {
@@ -25,11 +25,9 @@ char** tokenize_line(char* buffer) {
                 fprintf(stderr, "error in reallocating memory to $words in file tokennize_line");
             }
         }
-        word = strtok(NULL, DELIMETERS);
+        word = strtok(NULL, AMIGO_DELIMETERS);
     }
 
     words[pos] = NULL;
     return words;
-
-
 }
