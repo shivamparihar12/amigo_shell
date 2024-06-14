@@ -4,7 +4,7 @@
 // Amigo Libraries for Amigo Shell
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 // Amigo's func
 void repl_loop(void);
