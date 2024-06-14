@@ -1,6 +1,6 @@
 #ifndef AMIGO_SHELL_H
 #define AMIGO_SHELL_H
-#define DELIMETERS " \t\a\r\n"
+#define AMIGO_DELIMETERS " \t\a\r\n"
 
 // Amigo Libraries for Amigo Shell
 #include <stdio.h>
