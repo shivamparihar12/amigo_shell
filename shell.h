@@ -8,5 +8,8 @@
 
 // Amigo's func
 void repl_loop(void);
+char* read_line(void);
+char** tokenize_line(char* line);
+int execute_args(char** args);
 
 #endif
