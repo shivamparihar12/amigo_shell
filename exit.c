@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int exit(char** args)
+int Exit(char** args)
 {
     if (args[1])
         return (atoi(args[1]));

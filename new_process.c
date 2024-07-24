@@ -1,4 +1,5 @@
-#include <shell.h>
+#include "shell.h"
+#include <unistd.h>
 
 int new_process(char** args) {
     pid_t process_id;
@@ -17,7 +18,7 @@ int new_process(char** args) {
         do
         {
             waitpid(process_id, &status, WUNTRACED);
-        } while (!WIFEXITED(status) && !WIFSIGNALED(status))
+        } while (!WIFEXITED(status) && !WIFSIGNALED(status));
     }
     return -1;
 }

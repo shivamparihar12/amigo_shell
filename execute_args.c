@@ -1,4 +1,4 @@
-#include <shell.h>
+#include "shell.h"
 
 int execute_args(char** args) {
     char* builtinFuncList[] = {
@@ -11,21 +11,21 @@ int execute_args(char** args) {
     int (*builtinFunc[])(char**) = {
         &cd,
         &env,
-        &help,
-        &exit
+        &own_help,
+        &Exit
     };
 
     int pos = 0;
 
     if (args[0] == NULL) {
-        return -1;
+        return (-1);
     }
 
-    for (pos = 0; pos < sizeof(builtinFuncList) / sizeof(char*); pos++)
+    for (; pos < sizeof(builtinFuncList) / sizeof(char*); pos++)
     {
         if (strcmp(builtinFuncList[pos], args[0]) == 0)
         {
-            return (*builtinFuncList[pos])(args);
+            return (*builtinFunc[pos])(args);
         }
 
     }

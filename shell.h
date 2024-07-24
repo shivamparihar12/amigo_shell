@@ -17,6 +17,6 @@ int execute_args(char** args);
 int new_process(char** args);
 int cd(char** args);
 int env(char** args);
-int help(char** args);
-int exit(char** args);
+int own_help(char** args);
+int Exit(char** args);
 #endif
