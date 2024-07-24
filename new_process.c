@@ -1,5 +1,4 @@
 #include "shell.h"
-#include <unistd.h>
 
 int new_process(char** args) {
     pid_t process_id;

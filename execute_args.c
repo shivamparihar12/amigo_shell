@@ -4,7 +4,7 @@ int execute_args(char** args) {
     char* builtinFuncList[] = {
         "cd",
         "env",
-        "help",
+        "own_help",
         "exit"
     };
 
